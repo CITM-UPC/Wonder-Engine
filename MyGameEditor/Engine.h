@@ -7,7 +7,7 @@
 #include <vector>
 #include <string>
 
-#include "../MyGameEngine/WonderEngine.h"
+#include "../WonderEngine/WonderEngine.h"
 
 using namespace std;
 

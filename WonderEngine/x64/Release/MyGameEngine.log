@@ -1,0 +1,137 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (MyGameEngine.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Downloading https://github.com/microsoft/vcpkg-tool/releases/download/2023-09-15/vcpkg.exe -> C:\Users\Xavi\Documents\GitHub\Wonder-Engine\vcpkg\vcpkg.exe... done.
+  Validating signature... done.
+  
+  vcpkg package management program version 2023-09-15-ac02a9f660977426b8ec6392919fbb1d51b10998
+  
+  See LICENSE.txt for license information.
+  Telemetry
+  ---------
+  vcpkg collects usage data in order to help us improve your experience.
+  The data collected by Microsoft is anonymous.
+  You can opt-out of telemetry by re-running the bootstrap-vcpkg script with -disableMetrics,
+  passing --disable-metrics to vcpkg on the command line,
+  or by setting the VCPKG_DISABLE_METRICS environment variable.
+  
+  Read more about vcpkg telemetry at docs/about/privacy.md
+  Camera.cpp
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\MeshComp.h(44,21): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\TextureComp.h(59,21): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Camera.cpp(74,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Camera.cpp(75,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Camera.cpp(78,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Camera.cpp(79,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Camera.cpp(100,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Camera.cpp(101,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Camera.cpp(104,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Camera.cpp(105,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Cube.cpp
+  CubeImmediateMode.cpp
+  CubeInterleavedVBO.cpp
+  CubeVertexArray.cpp
+  CubeVertexBuffer.cpp
+  CubeWireframeIVBO.cpp
+  MeshComp.cpp
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\MeshComp.h(44,21): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\TextureComp.h(59,21): warning C4129: '.': unrecognized character escape sequence
+  Mesh.cpp
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Mesh.cpp(271,15): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Mesh.cpp(275,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Mesh.cpp(287,15): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Mesh.cpp(291,21): warning C4018: '<': signed/unsigned mismatch
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(135,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(134): message : see reference to function template instantiation '_Ty *std::construct_at<_Ty,Mesh::Formats,Mesh::V3T2*,unsigned __int64,const unsigned int&,unsigned int*,unsigned __int64,void>(_Ty *const ,Mesh::Formats &&,Mesh::V3T2 *&&,unsigned __int64 &&,const unsigned int &,unsigned int *&&,unsigned __int64 &&) noexcept(<expr>)' being compiled
+          with
+          [
+              _Ty=Mesh
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2006): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,Mesh::Formats,Mesh::V3T2*,unsigned __int64,const unsigned int&,unsigned int*,unsigned __int64>(_Ty &,Mesh::Formats &&,Mesh::V3T2 *&&,unsigned __int64 &&,const unsigned int &,unsigned int *&&,unsigned __int64 &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Mesh
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2725): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Mesh::Formats,Mesh::V3T2*,unsigned __int64,const unsigned int&,unsigned int*,unsigned __int64>(Mesh::Formats &&,Mesh::V3T2 *&&,unsigned __int64 &&,const unsigned int &,unsigned int *&&,unsigned __int64 &&)' being compiled
+          with
+          [
+              _Ty=Mesh
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Mesh::Formats,Mesh::V3T2*,unsigned __int64,const unsigned int&,unsigned int*,unsigned __int64>(Mesh::Formats &&,Mesh::V3T2 *&&,unsigned __int64 &&,const unsigned int &,unsigned int *&&,unsigned __int64 &&)' being compiled
+          with
+          [
+              _Ty=Mesh
+          ]
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Mesh.cpp(64): message : see reference to function template instantiation 'std::shared_ptr<Mesh> std::make_shared<Mesh,Mesh::Formats,_Ty*,unsigned __int64,const unsigned int&,unsigned int*,unsigned __int64>(Mesh::Formats &&,_Ty *&&,unsigned __int64 &&,const unsigned int &,unsigned int *&&,unsigned __int64 &&)' being compiled
+          with
+          [
+              _Ty=Mesh::V3T2
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(142,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  GameObject.cpp
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\MeshComp.h(44,21): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\TextureComp.h(59,21): warning C4129: '.': unrecognized character escape sequence
+  Primitive.cpp
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\MeshComp.h(44,21): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\TextureComp.h(59,21): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Primitive.cpp(31,34): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Primitive.cpp(32,34): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Primitive.cpp(33,32): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Primitive.cpp(35,34): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Primitive.cpp(36,34): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\Primitive.cpp(37,32): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+  Scene.cpp
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\MeshComp.h(44,21): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\TextureComp.h(59,21): warning C4129: '.': unrecognized character escape sequence
+  TextureComp.cpp
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\TextureComp.h(59,21): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\MeshComp.h(44,21): warning C4129: '.': unrecognized character escape sequence
+  Texture.cpp
+  TransformComp.cpp
+  WonderEngine.cpp
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\MeshComp.h(44,21): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\TextureComp.h(59,21): warning C4129: '.': unrecognized character escape sequence
+  Renderer.cpp
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\MeshComp.h(44,21): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\TextureComp.h(59,21): warning C4129: '.': unrecognized character escape sequence
+  Generating Code...
+C:\Users\Xavi\Documents\GitHub\Wonder-Engine\WonderEngine\GameObject.h(46): warning C4715: 'GameObject::getComponent': not all control paths return a value
+LINK : fatal error LNK1181: cannot open input file 'assimp-vc142-mt.lib'

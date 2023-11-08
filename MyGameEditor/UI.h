@@ -1,7 +1,7 @@
 #pragma once
 #include "Module.h"
 #include "imgui.h"
-#include "../MyGameEngine/GameObject.h"
+#include "../WonderEngine/GameObject.h"
 #include <vector>
 
 class Application;
