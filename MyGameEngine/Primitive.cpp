@@ -28,13 +28,8 @@ Sphere::Sphere(){
             double x = cos(lng);
             double y = sin(lng);
 
-            vertices.push_back(x * zr0);
-            vertices.push_back(y * zr0);
-            vertices.push_back(z0);
-
-            vertices.push_back(x * zr1);
-            vertices.push_back(y * zr1);
-            vertices.push_back(z1);
+            vertices.push_back(vec3f(x * zr0, y * zr0, z0));
+            vertices.push_back(vec3f(x * zr1, y * zr1, z1));
         }
     }
 }

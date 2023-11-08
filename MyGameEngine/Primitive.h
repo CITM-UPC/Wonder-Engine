@@ -13,13 +13,6 @@
 #include <sstream>
 #include <vector>
 
-enum Shape {
-	CUBE = 0,
-	SPHERE,
-	CYLINDER,
-	PLANE
-};
-
 struct Cube : Graphic
 {
 	static const int NUM_FACES = 6;
@@ -50,7 +43,7 @@ struct Sphere : Graphic
 {
 	static int radius;
 	static int num_subdivisions;
-	std::vector<float> vertices;
+	std::vector<vec3f> vertices;
 
 	Sphere();
 };

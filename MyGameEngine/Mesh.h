@@ -32,6 +32,7 @@ public:
 
 	static vector<Ptr> loadFromFile(const std::string& path);
 	static vector<Ptr> loadFromFile(const string& meshPath, const string& texturePath);
+	static vector<Ptr> loadFromVertexArray(std::vector<vec3f> vertexArray, vector<vec2f> textureCoords);
 
 	// Load a texture to an already loaded mesh
 	void loadTextureToMesh(const string& textPath);

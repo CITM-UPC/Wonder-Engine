@@ -71,6 +71,34 @@ std::vector<Mesh::Ptr> Mesh::loadFromFile(const std::string& path) {
 	return mesh_ptrs;
 }
 
+std::vector <Mesh::Ptr> Mesh::loadFromVertexArray(vector<vec3f> vertexArray, vector<vec2f> textureCoords) {
+
+	//load meshes
+	vector<Mesh::Ptr> mesh_ptrs;
+		const auto& mesh = vertexArray;
+
+		vector<V3T2> vertex_data;
+		for (size_t i = 0; i < mesh.size(); ++i) {
+			V3T2 v = { mesh[i], vec2f(textureCoords[i].x, textureCoords[i].y) };
+			vertex_data.push_back(v);
+		}
+
+		vector<unsigned int> index_data;
+		for (const auto& face : mesh.faces()) {
+			// push back each vertex from the triangles
+			index_data.push_back(face.mIndices[0]);
+			index_data.push_back(face.mIndices[1]);
+			index_data.push_back(face.mIndices[2]);
+		}
+
+		auto mesh_sptr = make_shared<Mesh>(Formats::F_V3T2, vertex_data.data(), vertex_data.size(), index_data.data(), index_data.size());
+		//mesh_sptr->texture = texture_ptrs[mesh.mMaterialIndex];
+		mesh_ptrs.push_back(mesh_sptr);
+	
+
+	return mesh_ptrs;
+}
+
 std::vector <Mesh::Ptr> Mesh::loadFromFile(const std::string& meshPath, const std::string& textPath)
 {
 	const auto scene_ptr = aiImportFile(meshPath.c_str(), aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_ForceGenNormals);
