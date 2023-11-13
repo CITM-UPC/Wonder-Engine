@@ -1,10 +1,10 @@
-﻿E:\Lorning\CITM\Programs\VS Studio 2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: El directorio intermedio (x64\Release\) contiene archivos compartidos de otro proyecto (MyGameEngine.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
-  Downloading https://github.com/microsoft/vcpkg-tool/releases/download/2023-09-15/vcpkg.exe -> E:\Lorning\CITM\3r\Engines\Wonder-Engine\vcpkg\vcpkg.exe... done.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (MyGameEngine.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Downloading https://github.com/microsoft/vcpkg-tool/releases/download/2023-09-15/vcpkg.exe -> C:\Users\paufz\Documents\GitHub\Wonder-Engine\vcpkg\vcpkg.exe... done.
   Validating signature... done.
   
-  versi├│n del programa de administraci├│n de paquetes vcpkg 2023-09-15-ac02a9f660977426b8ec6392919fbb1d51b10998
+  vcpkg package management program version 2023-09-15-ac02a9f660977426b8ec6392919fbb1d51b10998
   
-  Consulte LICENSE.txt para obtener informaci├│n sobre la licencia.
+  See LICENSE.txt for license information.
   Telemetry
   ---------
   vcpkg collects usage data in order to help us improve your experience.
@@ -14,129 +14,9 @@
   or by setting the VCPKG_DISABLE_METRICS environment variable.
   
   Read more about vcpkg telemetry at docs/about/privacy.md
-  Camera.cpp
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\MeshComp.h(44,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\TextureComp.h(59,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Camera.cpp(74,16): warning C4244: 'inicializando': conversión de 'T' a 'float'; posible pérdida de datos
-          with
-          [
-              T=double
-          ]
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Camera.cpp(75,16): warning C4244: 'inicializando': conversión de 'T' a 'float'; posible pérdida de datos
-          with
-          [
-              T=double
-          ]
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Camera.cpp(78,15): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Camera.cpp(79,15): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Camera.cpp(100,16): warning C4244: 'inicializando': conversión de 'T' a 'float'; posible pérdida de datos
-          with
-          [
-              T=double
-          ]
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Camera.cpp(101,16): warning C4244: 'inicializando': conversión de 'T' a 'float'; posible pérdida de datos
-          with
-          [
-              T=double
-          ]
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Camera.cpp(104,15): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Camera.cpp(105,15): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-  Cube.cpp
-  CubeImmediateMode.cpp
-  CubeInterleavedVBO.cpp
-  CubeVertexArray.cpp
-  CubeVertexBuffer.cpp
-  CubeWireframeIVBO.cpp
-  MeshComp.cpp
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\MeshComp.h(44,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\TextureComp.h(59,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-  Mesh.cpp
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Mesh.cpp(271,15): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Mesh.cpp(275,21): warning C4018: '<': no coinciden signed/unsigned
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Mesh.cpp(287,15): warning C4244: 'argumento': conversión de 'int' a 'GLfloat'; posible pérdida de datos
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Mesh.cpp(291,21): warning C4018: '<': no coinciden signed/unsigned
-E:\Lorning\CITM\Programs\VS Studio 2019\VC\Tools\MSVC\14.29.30133\include\xutility(135,1): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
-E:\Lorning\CITM\Programs\VS Studio 2019\VC\Tools\MSVC\14.29.30133\include\xutility(134): message : Vea la referencia a la creación de una instancia de la función plantilla "_Ty *std::construct_at<_Ty,Mesh::Formats,Mesh::V3T2*,unsigned __int64,const unsigned int&,unsigned int*,unsigned __int64,void>(_Ty *const ,Mesh::Formats &&,Mesh::V3T2 *&&,unsigned __int64 &&,const unsigned int &,unsigned int *&&,unsigned __int64 &&) noexcept(<expr>)" que se está compilando
-          with
-          [
-              _Ty=Mesh
-          ]
-E:\Lorning\CITM\Programs\VS Studio 2019\VC\Tools\MSVC\14.29.30133\include\memory(2006): message : Vea la referencia a la creación de una instancia de la función plantilla "void std::_Construct_in_place<_Ty,Mesh::Formats,Mesh::V3T2*,unsigned __int64,const unsigned int&,unsigned int*,unsigned __int64>(_Ty &,Mesh::Formats &&,Mesh::V3T2 *&&,unsigned __int64 &&,const unsigned int &,unsigned int *&&,unsigned __int64 &&) noexcept(false)" que se está compilando
-          with
-          [
-              _Ty=Mesh
-          ]
-E:\Lorning\CITM\Programs\VS Studio 2019\VC\Tools\MSVC\14.29.30133\include\memory(2725): message : Vea la referencia a la creación de una instancia de la función plantilla "std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Mesh::Formats,Mesh::V3T2*,unsigned __int64,const unsigned int&,unsigned int*,unsigned __int64>(Mesh::Formats &&,Mesh::V3T2 *&&,unsigned __int64 &&,const unsigned int &,unsigned int *&&,unsigned __int64 &&)" que se está compilando
-          with
-          [
-              _Ty=Mesh
-          ]
-E:\Lorning\CITM\Programs\VS Studio 2019\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : Vea la referencia a la creación de una instancia de la función plantilla "std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Mesh::Formats,Mesh::V3T2*,unsigned __int64,const unsigned int&,unsigned int*,unsigned __int64>(Mesh::Formats &&,Mesh::V3T2 *&&,unsigned __int64 &&,const unsigned int &,unsigned int *&&,unsigned __int64 &&)" que se está compilando
-          with
-          [
-              _Ty=Mesh
-          ]
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Mesh.cpp(64): message : Vea la referencia a la creación de una instancia de la función plantilla "std::shared_ptr<Mesh> std::make_shared<Mesh,Mesh::Formats,_Ty*,unsigned __int64,const unsigned int&,unsigned int*,unsigned __int64>(Mesh::Formats &&,_Ty *&&,unsigned __int64 &&,const unsigned int &,unsigned int *&&,unsigned __int64 &&)" que se está compilando
-          with
-          [
-              _Ty=Mesh::V3T2
-          ]
-E:\Lorning\CITM\Programs\VS Studio 2019\VC\Tools\MSVC\14.29.30133\include\xutility(142,1): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
-  GameObject.cpp
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\MeshComp.h(44,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\TextureComp.h(59,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-  Primitive.cpp
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\MeshComp.h(44,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\TextureComp.h(59,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Primitive.cpp(31,34): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
-          with
-          [
-              _Ty=float
-          ]
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Primitive.cpp(32,34): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
-          with
-          [
-              _Ty=float
-          ]
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Primitive.cpp(33,32): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
-          with
-          [
-              _Ty=float
-          ]
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Primitive.cpp(35,34): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
-          with
-          [
-              _Ty=float
-          ]
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Primitive.cpp(36,34): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
-          with
-          [
-              _Ty=float
-          ]
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\Primitive.cpp(37,32): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
-          with
-          [
-              _Ty=float
-          ]
-  Scene.cpp
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\MeshComp.h(44,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\TextureComp.h(59,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-  TextureComp.cpp
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\TextureComp.h(59,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\MeshComp.h(44,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-  Texture.cpp
-  TransformComp.cpp
-  WonderEngine.cpp
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\MeshComp.h(44,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\TextureComp.h(59,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-  Renderer.cpp
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\MeshComp.h(44,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\TextureComp.h(59,21): warning C4129: '.': secuencia de escape de carácter no reconocida
-  Generando código...
-E:\Lorning\CITM\3r\Engines\Wonder-Engine\MyGameEngine\GameObject.h(46): warning C4715: 'GameObject::getComponent': no todas las rutas de acceso de control devuelven un valor
-GLU32.lib(GLU32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR ya se definió en OpenGL32.lib(OPENGL32.dll); segunda definición omitida
-DevIL.lib(DevIL.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR ya se definió en OpenGL32.lib(OPENGL32.dll); segunda definición omitida
-assimp-vc142-mt.lib(assimp-vc142-mt.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR ya se definió en OpenGL32.lib(OPENGL32.dll); segunda definición omitida
-Mesh.obj : warning LNK4006: "public: enum aiReturn __cdecl aiMaterial::GetTexture(enum aiTextureType,unsigned int,struct aiString *,enum aiTextureMapping *,unsigned int *,float *,enum aiTextureOp *,enum aiTextureMapMode *)const " (?GetTexture@aiMaterial@@QEBA?AW4aiReturn@@W4aiTextureType@@IPEAUaiString@@PEAW4aiTextureMapping@@PEAIPEAMPEAW4aiTextureOp@@PEAW4aiTextureMapMode@@@Z) ya se definió en assimp-vc142-mt.lib(assimp-vc142-mt.dll); segunda definición omitida
-Cube.obj : warning LNK4006: "public: __cdecl Cube::Cube(void)" (??0Cube@@QEAA@XZ) ya se definió en Primitive.obj; segunda definición omitida
-  MyGameEngine.vcxproj -> E:\Lorning\CITM\3r\Engines\Wonder-Engine\x64\Release\WonderEngine.lib
+GLU32.lib(GLU32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in OpenGL32.lib(OPENGL32.dll); second definition ignored
+DevIL.lib(DevIL.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in OpenGL32.lib(OPENGL32.dll); second definition ignored
+assimp-vc143-mt.lib(assimp-vc143-mt.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in OpenGL32.lib(OPENGL32.dll); second definition ignored
+Mesh.obj : warning LNK4006: "public: enum aiReturn __cdecl aiMaterial::GetTexture(enum aiTextureType,unsigned int,struct aiString *,enum aiTextureMapping *,unsigned int *,float *,enum aiTextureOp *,enum aiTextureMapMode *)const " (?GetTexture@aiMaterial@@QEBA?AW4aiReturn@@W4aiTextureType@@IPEAUaiString@@PEAW4aiTextureMapping@@PEAIPEAMPEAW4aiTextureOp@@PEAW4aiTextureMapMode@@@Z) already defined in assimp-vc143-mt.lib(assimp-vc143-mt.dll); second definition ignored
+Cube.obj : warning LNK4006: "public: __cdecl Cube::Cube(void)" (??0Cube@@QEAA@XZ) already defined in Primitive.obj; second definition ignored
+  MyGameEngine.vcxproj -> C:\Users\paufz\Documents\GitHub\Wonder-Engine\x64\Release\WonderEngine.lib
