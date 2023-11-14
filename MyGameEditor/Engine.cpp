@@ -2,10 +2,6 @@
 #include <sstream>
 #include <vector>
 #include <chrono>
-#include <thread>
-#include <regex>
-#include <fstream>
-#include <filesystem>
 
 #include "Application.h"
 #include "Globals.h"
@@ -39,8 +35,7 @@ bool GameEngine::Init()
 	engine.renderer->camera.aspect = static_cast<double>(WINDOW_WIDTH) / WINDOW_HEIGHT;
 	engine.renderer->camera.zNear = 0.1;
 	engine.renderer->camera.zFar = 100;
-	engine.renderer->camera.eye = vec3(5, 2, 5);
-	engine.renderer->camera.center = vec3(0, 1, 0);
+	engine.renderer->camera.eye = vec3(5, 2, 5);	engine.renderer->camera.center = vec3(0, 1, 0);
 	engine.renderer->camera.up = vec3(0, 1, 0);
 	engine.renderer->camera.computeAxis();
 
@@ -139,7 +134,6 @@ void GameEngine::detectCameraInput() {
 				else {
 					engine.renderer->camera.ResetCenter(true);
 				}
-				
 			}
 			if (App->input->GetMousewheel() != 0) {
 				engine.renderer->camera.CameraZoom(App->input->GetMousewheel());
@@ -171,7 +165,7 @@ void GameEngine::createDroppedFile(string path)
 	{
 		type = NOTADMITTED;
 	}
-	
+
 	regex pathExtractor(".*\\\\(.*)$");
 	smatch pathArr;
 	regex_match(path, pathArr, pathExtractor);

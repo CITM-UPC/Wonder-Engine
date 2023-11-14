@@ -3,7 +3,6 @@
 #include "EngineModule.h"
 #include "Camera.h"
 
-#include <list>
 #include <vector>
 
 class Renderer : public EngineModule

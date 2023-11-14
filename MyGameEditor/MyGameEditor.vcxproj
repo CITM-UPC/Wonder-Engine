@@ -62,6 +62,7 @@
       <AdditionalDependencies>glew32.lib;OpenGL32.lib;SDL2.lib;SDL2main.lib;imgui.lib;parson.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>msvcrt.lib</IgnoreSpecificDefaultLibraries>
+      <NoEntryPoint>false</NoEntryPoint>
     </Link>
     <PreBuildEvent>
       <Command>call $(SolutionDir)\vcpkg\bootstrap-vcpkg.bat
@@ -92,6 +93,7 @@ $(SolutionDir)\vcpkg\vcpkg.exe install opengl glew sdl2 imgui[opengl3-binding,sd
       <AdditionalDependencies>glew32.lib;OpenGL32.lib;SDL2.lib;SDL2main.lib;imgui.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>msvcrt.lib</IgnoreSpecificDefaultLibraries>
+      <NoEntryPoint>false</NoEntryPoint>
     </Link>
     <PreBuildEvent>
       <Command>call $(SolutionDir)\vcpkg\bootstrap-vcpkg.bat
