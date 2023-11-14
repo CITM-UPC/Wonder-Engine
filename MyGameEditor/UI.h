@@ -57,6 +57,10 @@ private:
 	void setupABOUT();
 	void setupCONFIG();
 
+	void transformINSPECTOR();
+	void meshINSPECTOR();
+	void textureINSPECTOR();
+
 	void windowCONFIG();
 
 	void calculateFramerate();

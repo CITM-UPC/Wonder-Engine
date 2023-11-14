@@ -130,83 +130,12 @@ void UI::setupINSPECTOR()
 {
 	if (Begin("Inspector"))
 	{
-		if (CollapsingHeader("Transform"))
-		{
-			if (selectedObj != nullptr)
-			{
-				PushItemWidth(60.0f);
-				SeparatorText("Rotation");
-				DragFloat(posxlabel, &fobjPos.x);
-				DragFloat(posylabel, &fobjPos.y);
-				DragFloat(poszlabel, &fobjPos.z);
+		transformINSPECTOR();
 
-				SeparatorText("Rotation");
-				DragFloat(anglexlabel, &fobjRot.x);
-				DragFloat(angleylabel, &fobjRot.y);
-				DragFloat(anglezlabel, &fobjRot.z);
+		meshINSPECTOR();
 
-				SeparatorText("Scale");
-				DragFloat(scalexlabel, &fobjSca.x);
-				DragFloat(scaleylabel, &fobjSca.y);
-				DragFloat(scalezlabel, &fobjSca.z);
-			}
-			else
-				ImGui::Text("No Object selected");
-		}
-		if (CollapsingHeader("Mesh"))
-		{
-			if (selectedObj != nullptr) {
-				MeshComp* meshcomp = (MeshComp*)selectedObj->getComponent(MESH);
-				string meshname = meshcomp->getName();
-				Text("Texture file name:"); SameLine();
-				ImGui::TextColored(vramgreen.rgba, meshname.c_str());
-				if (IsItemHovered())
-				{
-					string meshpath = meshcomp->getFilePath();
-					SetTooltip(meshpath.c_str());
-				}
-				stringstream meshfacecount;
-				meshfacecount << "Mesh face count: " << meshcomp->getMeshData()->getFaces();
-				stringstream meshvertcount;
-				meshvertcount << "Mesh vertice count: " << meshcomp->getMeshData()->getVerts();
-				Separator();
-				Text(meshfacecount.str().c_str());
-				Text(meshvertcount.str().c_str());
-				Separator();
-				ImGui::Checkbox("Use Checkers Texture", &meshcomp->getMeshData()->drawChecker);
-				ImGui::Checkbox("See Vertex Normals", &meshcomp->getMeshData()->drawNormalsVerts);
-				ImGui::Checkbox("See Face Normals", &meshcomp->getMeshData()->drawNormalsFaces);
-			}
-			else
-				ImGui::Text("No Object selected");
-		}
-		if (CollapsingHeader("Texture"))
-		{
-			if (selectedObj != nullptr) {
-				TextureComp* textcomp = (TextureComp*)selectedObj->getComponent(TEXTURE);
-				string texturename = textcomp->getName();
-				Text("Texture file name: "); SameLine();
-				ImGui::TextColored(orange.rgba, texturename.c_str());
-				if (IsItemHovered())
-				{
-					string texturepath = textcomp->getFilePath();
-					SetTooltip(texturepath.c_str());
-				}
-				vec2 textsize = textcomp->getTextureData()->getSize();
-				stringstream textwidthstring;
-				stringstream textheightstring;
-				textwidthstring << textsize.x;
-				textheightstring << textsize.y;
+		textureINSPECTOR();
 
-				Text("Texture size:"); SameLine();
-				TextColored(orange.rgba, textwidthstring.str().c_str()); SameLine();
-				Text("x"); SameLine();
-				TextColored(orange.rgba, textheightstring.str().c_str());
-				Separator();
-			}
-			else
-				ImGui::Text("No Object selected");
-		}
 		End();
 	}
 }
@@ -225,52 +154,7 @@ void UI::setupCONFIG()
 		{
 			if (TreeNode("Window"))
 			{
-				SeparatorText("Size");
-				PushItemWidth(60.0f);
-				if (DragFloat("Width", &windowwidth, 1.0f, 1.0f, 7680, "%.0f")) App->window->resizeWindow(windowwidth, windowheight);
-				if (DragFloat("Height", &windowheight, 1.0f, 1.0f, 4320, "%.0f")) App->window->resizeWindow(windowwidth, windowheight);
-				if (TreeNode("Presets"))
-				{
-					SeparatorText("EDTV");
-					if (MenuItem("720 x 480"))
-					{
-						windowwidth = 720;
-						windowheight = 480;
-						App->window->resizeWindow(windowwidth, windowheight);
-					}
-					if (MenuItem("720 x 576"))
-					{
-						windowwidth = 720;
-						windowheight = 576;
-						App->window->resizeWindow(windowwidth, windowheight);
-					}
-					SeparatorText("HDTV");
-					if (MenuItem("1280 x 720"))
-					{
-						windowwidth = 1280;
-						windowheight = 720;
-						App->window->resizeWindow(windowwidth, windowheight);
-					}
-					if (MenuItem("1920 x 1080"))
-					{
-						windowwidth = 1920;
-						windowheight = 1080;
-						App->window->resizeWindow(windowwidth, windowheight);
-					}
-					SeparatorText("UHDTV");
-					if (MenuItem("3840 x 2160"))
-					{
-						windowwidth = 3840;
-						windowheight = 2160;
-						App->window->resizeWindow(windowwidth, windowheight);
-					}
-				}
-
-				SeparatorText("Markers");
-				Checkbox("Fullscreen", &App->window->fullscreen);
-				App->window->handleFullscreen();
-				Checkbox("Resizable", &App->window->resizable);
-				App->window->handleResizable();
+				windowCONFIG();
 
 				TreePop();
 			}
@@ -502,6 +386,146 @@ void UI::loadHardwareInfo()
 
 	info.CPU_count = SDL_GetCPUCount();
 	info.l1_cachekb = SDL_GetCPUCacheLineSize();
+}
+
+void UI::transformINSPECTOR()
+{
+	if (CollapsingHeader("Transform"))
+	{
+		if (selectedObj != nullptr)
+		{
+			PushItemWidth(60.0f);
+			SeparatorText("Rotation");
+			DragFloat(posxlabel, &fobjPos.x);
+			DragFloat(posylabel, &fobjPos.y);
+			DragFloat(poszlabel, &fobjPos.z);
+
+			SeparatorText("Rotation");
+			DragFloat(anglexlabel, &fobjRot.x);
+			DragFloat(angleylabel, &fobjRot.y);
+			DragFloat(anglezlabel, &fobjRot.z);
+
+			SeparatorText("Scale");
+			DragFloat(scalexlabel, &fobjSca.x);
+			DragFloat(scaleylabel, &fobjSca.y);
+			DragFloat(scalezlabel, &fobjSca.z);
+		}
+		else
+			ImGui::Text("No Object selected");
+	}
+}
+
+void UI::meshINSPECTOR()
+{
+	if (CollapsingHeader("Mesh"))
+	{
+		if (selectedObj != nullptr)
+		{
+			MeshComp* meshcomp = (MeshComp*)selectedObj->getComponent(MESH);
+			string meshname = meshcomp->getName();
+			Text("Texture file name:"); SameLine();
+			ImGui::TextColored(vramgreen.rgba, meshname.c_str());
+			if (IsItemHovered())
+			{
+				string meshpath = meshcomp->getFilePath();
+				SetTooltip(meshpath.c_str());
+			}
+			stringstream meshfacecount;
+			meshfacecount << "Mesh face count: " << meshcomp->getMeshData()->getFaces();
+			stringstream meshvertcount;
+			meshvertcount << "Mesh vertice count: " << meshcomp->getMeshData()->getVerts();
+			Separator();
+			Text(meshfacecount.str().c_str());
+			Text(meshvertcount.str().c_str());
+			Separator();
+			ImGui::Checkbox("Use Checkers Texture", &meshcomp->getMeshData()->drawChecker);
+			ImGui::Checkbox("See Vertex Normals", &meshcomp->getMeshData()->drawNormalsVerts);
+			ImGui::Checkbox("See Face Normals", &meshcomp->getMeshData()->drawNormalsFaces);
+		}
+		else
+			ImGui::Text("No Object selected");
+	}
+}
+
+void UI::textureINSPECTOR()
+{
+	if (CollapsingHeader("Texture"))
+	{
+		if (selectedObj != nullptr)
+		{
+			TextureComp* textcomp = (TextureComp*)selectedObj->getComponent(TEXTURE);
+			string texturename = textcomp->getName();
+			Text("Texture file name: "); SameLine();
+			ImGui::TextColored(orange.rgba, texturename.c_str());
+			if (IsItemHovered())
+			{
+				string texturepath = textcomp->getFilePath();
+				SetTooltip(texturepath.c_str());
+			}
+			vec2 textsize = textcomp->getTextureData()->getSize();
+			stringstream textwidthstring;
+			stringstream textheightstring;
+			textwidthstring << textsize.x;
+			textheightstring << textsize.y;
+
+			Text("Texture size:"); SameLine();
+			TextColored(orange.rgba, textwidthstring.str().c_str()); SameLine();
+			Text("x"); SameLine();
+			TextColored(orange.rgba, textheightstring.str().c_str());
+			Separator();
+		}
+		else
+			ImGui::Text("No Object selected");
+	}
+}
+
+void UI::windowCONFIG()
+{
+	SeparatorText("Size");
+	PushItemWidth(60.0f);
+	if (DragFloat("Width", &windowwidth, 1.0f, 1.0f, 7680, "%.0f")) App->window->resizeWindow(windowwidth, windowheight);
+	if (DragFloat("Height", &windowheight, 1.0f, 1.0f, 4320, "%.0f")) App->window->resizeWindow(windowwidth, windowheight);
+	if (TreeNode("Presets"))
+	{
+		SeparatorText("EDTV");
+		if (MenuItem("720 x 480"))
+		{
+			windowwidth = 720;
+			windowheight = 480;
+			App->window->resizeWindow(windowwidth, windowheight);
+		}
+		if (MenuItem("720 x 576"))
+		{
+			windowwidth = 720;
+			windowheight = 576;
+			App->window->resizeWindow(windowwidth, windowheight);
+		}
+		SeparatorText("HDTV");
+		if (MenuItem("1280 x 720"))
+		{
+			windowwidth = 1280;
+			windowheight = 720;
+			App->window->resizeWindow(windowwidth, windowheight);
+		}
+		if (MenuItem("1920 x 1080"))
+		{
+			windowwidth = 1920;
+			windowheight = 1080;
+			App->window->resizeWindow(windowwidth, windowheight);
+		}
+		SeparatorText("UHDTV");
+		if (MenuItem("3840 x 2160"))
+		{
+			windowwidth = 3840;
+			windowheight = 2160;
+			App->window->resizeWindow(windowwidth, windowheight);
+		}
+	}
+	SeparatorText("Markers");
+	Checkbox("Fullscreen", &App->window->fullscreen);
+	App->window->handleFullscreen();
+	Checkbox("Resizable", &App->window->resizable);
+	App->window->handleResizable();
 }
 
 void UI::OsOpenInShell(const char* path)
