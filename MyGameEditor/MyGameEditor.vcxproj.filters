@@ -9,54 +9,60 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Modules">
+      <UniqueIdentifier>{15b65cfa-4036-43f5-b12e-79b8f451ff23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{824f0665-ca8c-4ea2-92ef-5b477ff23cb2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Window.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UI.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Module.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Globals.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="types.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>App</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

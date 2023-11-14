@@ -35,7 +35,8 @@ bool GameEngine::Init()
 	engine.renderer->camera.aspect = static_cast<double>(WINDOW_WIDTH) / WINDOW_HEIGHT;
 	engine.renderer->camera.zNear = 0.1;
 	engine.renderer->camera.zFar = 100;
-	engine.renderer->camera.eye = vec3(5, 2, 5);	engine.renderer->camera.center = vec3(0, 1, 0);
+	engine.renderer->camera.eye = vec3(5, 2, 5);
+	engine.renderer->camera.center = vec3(0, 1, 0);
 	engine.renderer->camera.up = vec3(0, 1, 0);
 	engine.renderer->camera.computeAxis();
 

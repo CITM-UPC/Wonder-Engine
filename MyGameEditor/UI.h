@@ -57,6 +57,8 @@ private:
 	void setupABOUT();
 	void setupCONFIG();
 
+	void windowCONFIG();
+
 	void calculateFramerate();
 
 	void updateObjInspector();
