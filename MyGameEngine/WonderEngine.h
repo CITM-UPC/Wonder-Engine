@@ -7,11 +7,11 @@
 #include <string>
 #include <vector>
 
-class WonderEngine
-{
+class WonderEngine {
 public:
 	Renderer* renderer;
 	Scene* scene;
+
 private:
 	std::list<EngineModule*> list_modulesE;
 
@@ -47,5 +47,4 @@ public:
 	{
 		renderer->camera.aspect = newAspect;
 	}
-
 };
