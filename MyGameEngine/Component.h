@@ -5,7 +5,6 @@
 #include "types.h"
 #include <vector>
 #include <string>
-#include <regex>
 using namespace std;
 
 enum component_type
